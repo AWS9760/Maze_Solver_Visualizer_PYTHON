@@ -253,6 +253,7 @@ This project is open-source and available under the **MIT License**.
 ## 👨‍💻 Author
 
 **Abdul Wali**
+
 Computer Science Student | Software Developer
 
 ---
