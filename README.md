@@ -59,18 +59,6 @@ Track algorithm performance in real time:
 
 ---
 
-## 📸 Demo
-
-> Add screenshots or GIFs here for a better GitHub presentation.
-
-Example:
-
-```md
-![Maze Solver Visualizer](docs/demo.gif)
-```
-
----
-
 ## 🛠️ Tech Stack
 
 * **Language:** Python 3
