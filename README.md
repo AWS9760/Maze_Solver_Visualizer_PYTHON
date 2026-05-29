@@ -1,42 +1,93 @@
-# Maze Solver Visualizer (Python)
+# 🧩 Maze Solver Visualizer (Python)
 
-An interactive desktop application for exploring classic pathfinding algorithms on a 2D grid. Draw walls, place start and end points, generate mazes, and watch **BFS**, **DFS**, **A\***, and **Dijkstra** search the grid step by step with live statistics and animation.
+An interactive **pathfinding and maze visualization tool** built with **Python** and **Tkinter**.
+Create mazes, place start and end nodes, and watch popular search algorithms explore the grid step-by-step with smooth animations and live statistics.
 
-Built with **Python** and **Tkinter** — no third-party packages required.
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+> 🚀 Built for learning, experimentation, and visualizing how pathfinding algorithms work in real time.
 
 ---
 
-## Features
+## ✨ Features
 
-- **Four pathfinding algorithms** — compare breadth-first, depth-first, A*, and Dijkstra on the same maze
-- **Step-by-step visualization** — visited cells and final path animate at an adjustable speed
-- **Open / closed set display** — A* and Dijkstra highlight frontier and explored nodes after the run
-- **Interactive grid editing** — paint walls and move start/end with the mouse
-- **Maze generation** — random wall placement or perfect mazes via **Wilson's algorithm**
-- **Configurable grid** — resize from 10×10 to 50×50
-- **Live metrics** — nodes visited, path length, path cost, and search time in the status bar
-- **Dark-themed UI** — responsive canvas that scales with the window
+### 🧠 Pathfinding Algorithms
 
----
+Visualize and compare:
 
-## Demo
-
-> Add a screenshot or GIF here after uploading to GitHub, for example:
->
-> `![Maze Solver Visualizer](docs/demo.gif)`
+* **Breadth-First Search (BFS)**
+* **Depth-First Search (DFS)**
+* **A*** (A-Star Search)
+* **Dijkstra’s Algorithm**
 
 ---
 
-## Requirements
+### 🧱 Maze Generation
 
-- **Python 3.8+** (recommended)
-- **Tkinter** — included with most standard Python installs on Windows and macOS
+Generate complex mazes instantly using:
 
-On **Linux**, if Tkinter is missing, install it for your distribution, for example:
+* **Random Maze Generation**
+* **Wilson’s Algorithm** (perfect maze generation)
+
+---
+
+### 🎮 Interactive Grid System
+
+* Draw walls using mouse drag
+* Place and move **start** / **end** nodes
+* Adjustable grid size (**10×10 → 50×50**)
+* Responsive dark-themed interface
+
+---
+
+### ⚡ Real-Time Visualization
+
+* Step-by-step pathfinding animation
+* Adjustable animation speed
+* Explored nodes and final path highlighting
+* Open/closed set visualization for A* and Dijkstra
+
+---
+
+### 📊 Live Statistics
+
+Track algorithm performance in real time:
+
+* Nodes visited
+* Path length
+* Path cost
+* Execution time
+* Search status
+
+---
+
+## 📸 Demo
+
+> Add screenshots or GIFs here for a better GitHub presentation.
+
+Example:
+
+```md
+![Maze Solver Visualizer](docs/demo.gif)
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* **Language:** Python 3
+* **GUI Framework:** Tkinter
+* **Architecture:** MVC-inspired structure
+* **Algorithms:** BFS, DFS, A*, Dijkstra
+
+---
+
+## ⚙️ Requirements
+
+* **Python 3.8+**
+* **Tkinter** (included with most Python installations)
+
+### Linux Users
+
+Install Tkinter if it is missing:
 
 ```bash
 # Debian / Ubuntu
@@ -48,38 +99,42 @@ sudo dnf install python3-tkinter
 
 ---
 
-## Installation
+## 🚀 Installation
 
-1. **Clone the repository**
+### 1️⃣ Clone the Repository
 
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/Maze_Solver_Visualizer_PYTHON.git
-   cd Maze_Solver_Visualizer_PYTHON
-   ```
-
-2. **(Optional) Create a virtual environment**
-
-   ```bash
-   python -m venv venv
-
-   # Windows
-   venv\Scripts\activate
-
-   # macOS / Linux
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**
-
-   There are no external Python packages. See `requirements.txt` for details.
-
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/YOUR_USERNAME/Maze_Solver_Visualizer_PYTHON.git
+cd Maze_Solver_Visualizer_PYTHON
+```
 
 ---
 
-## Usage
+### 2️⃣ (Optional) Create a Virtual Environment
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+---
+
+### 3️⃣ Install Dependencies
+
+No external packages are required.
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ How to Run
 
 Run the application from the project root:
 
@@ -87,69 +142,71 @@ Run the application from the project root:
 python main.py
 ```
 
-### Toolbar
+---
 
-| Control | Description |
-|--------|-------------|
-| **Algorithm** | Choose BFS, DFS, A*, or Dijkstra |
-| **Maze Generator** | Random (30% walls) or Wilson's Algorithm (perfect maze) |
-| **Start Visualization** | Run the selected algorithm and animate the result |
-| **Clear Grid** | Remove all walls and reset start/end to corners |
-| **Reset Path** | Clear visited/path highlighting only |
-| **Generate Maze** | Build a new maze with the selected generator |
-| **Speed** | Animation speed (1 = slow, 100 = fast) |
-| **Grid Size** | Change maze dimensions (10–50) |
+## 🎯 Usage Guide
 
-### Mouse controls
-
-| Action | Effect |
-|--------|--------|
-| **Left click** | Toggle wall on an empty cell; remove wall on a wall cell |
-| **Left drag** | Draw walls while dragging |
-| **Right click** | Cycle cell to **start** (green); click start again to set **end** (red); click end to clear |
-
-Default start is the **top-left** corner; default end is the **bottom-right**.
+1. Select a pathfinding algorithm
+2. Create or generate a maze
+3. Adjust speed and grid size (optional)
+4. Click **Start Visualization**
+5. Observe the algorithm exploring the grid in real time
 
 ---
 
-## Algorithms
+### 🖱️ Mouse Controls
 
-| Algorithm | Strategy | Notes in this app |
-|-----------|----------|-------------------|
-| **BFS** | Layer-by-layer expansion | Shortest path in unweighted grids; visits shown in expansion order |
-| **DFS** | Depth-first stack | May not find the shortest path; useful to compare exploration shape |
-| **A\*** | Best-first with heuristic | Manhattan distance heuristic; open/closed sets visualized |
-| **Dijkstra** | Uniform-cost search | Treats each step with equal cost; open/closed sets visualized |
+| Action          | Effect                      |
+| --------------- | --------------------------- |
+| **Left Click**  | Add/remove walls            |
+| **Left Drag**   | Draw walls continuously     |
+| **Right Click** | Set or move start/end nodes |
 
-All algorithms use **4-directional** movement (up, down, left, right). Walls are impassable.
-
----
-
-## Color legend
-
-| Color | Meaning |
-|-------|---------|
-| Green | Start |
-| Red | End |
-| Dark gray / black | Wall |
-| Light gray | Empty cell |
-| Blue shades | Visited / open set / closed set |
-| Yellow | Final path |
+Default start node: **Top-left**
+Default end node: **Bottom-right**
 
 ---
 
-## Project structure
+## 📘 Algorithm Summary
 
-```
+| Algorithm    | Description                                    |
+| ------------ | ---------------------------------------------- |
+| **BFS**      | Finds shortest path in unweighted grids        |
+| **DFS**      | Explores deeply but may not find shortest path |
+| **Dijkstra** | Computes shortest path using cumulative cost   |
+| **A***       | Uses heuristics for faster optimal pathfinding |
+
+All algorithms use **4-directional movement**:
+⬆️ Up • ⬇️ Down • ⬅️ Left • ➡️ Right
+
+---
+
+## 🎨 Color Legend
+
+| Color               | Meaning                   |
+| ------------------- | ------------------------- |
+| 🟩 Green            | Start Node                |
+| 🟥 Red              | End Node                  |
+| ⬛ Dark Gray / Black | Wall                      |
+| ⬜ Light Gray        | Empty Cell                |
+| 🔵 Blue Shades      | Explored / Frontier Nodes |
+| 🟨 Yellow           | Final Path                |
+
+---
+
+## 📂 Project Structure
+
+```text
 Maze_Solver_Visualizer_PYTHON/
-├── main.py                      # Application entry point
+├── main.py
 ├── requirements.txt
 ├── controller/
-│   ├── maze_controller.py       # Grid input, algorithm runs, maze generation
-│   └── animation_controller.py  # Step-by-step visualization timing
+│   ├── maze_controller.py
+│   └── animation_controller.py
 ├── model/
-│   ├── grid.py                  # Grid state and neighbors
-│   ├── cell.py / cell_type.py   # Cell model and costs
+│   ├── grid.py
+│   ├── cell.py
+│   ├── cell_type.py
 │   ├── algorithms/
 │   │   ├── bfs.py
 │   │   ├── dfs.py
@@ -163,48 +220,53 @@ Maze_Solver_Visualizer_PYTHON/
 │   ├── status_bar.py
 │   └── grid_renderer.py
 └── utils/
-    └── pair.py                  # (row, col) coordinate helper
+    └── pair.py
 ```
 
-The codebase follows a simple **MVC-style** layout: `model` holds data and algorithms, `ui` handles rendering and widgets, and `controller` wires user actions to logic.
+---
+
+## 🧠 Educational Purpose
+
+This project is ideal for:
+
+* Learning pathfinding algorithms
+* Visualizing search strategies
+* Understanding algorithm efficiency
+* AI and Data Structures coursework
+* Experimenting with maze generation techniques
 
 ---
 
-## How it works
+## 💡 Future Improvements
 
-1. You define the maze (walls, start, end) or generate one.
-2. On **Start Visualization**, the chosen algorithm runs on a **background thread** so the UI stays responsive.
-3. When the search finishes, the **AnimationController** replays visited cells, then draws the path.
-4. The status bar reports **nodes visited**, **path length**, **path cost**, and **elapsed time**.
-
-Path cost sums per-cell movement costs from `CellType` (walls use a large sentinel cost and are never traversed).
-
----
-
-## Educational context
-
-This project is suited for **AI / algorithms courses** and self-study: compare how each search strategy expands through the grid, observe trade-offs between optimality and exploration, and experiment with maze density and size.
+* Additional pathfinding algorithms
+* Diagonal movement support
+* Weighted terrain system
+* Save/load maze configurations
+* Step-by-step execution mode
+* Side-by-side algorithm comparison
+* Export statistics and screenshots
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-Issues and pull requests are welcome. If you extend the project, consider:
-
-- Additional algorithms (e.g. Greedy Best-First, Bidirectional Search)
-- Diagonal movement or weighted terrain
-- Export/import of maze layouts
-- Screenshots in this README
+Contributions are welcome!
+Feel free to fork the project and submit a pull request.
 
 ---
 
-## License
+## 📜 License
 
-This project is open source. Add a `LICENSE` file (e.g. MIT) when publishing if you have not already.
+This project is open-source and available under the **MIT License**.
 
 ---
 
-## Acknowledgments
+## 👨‍💻 Author
 
-- **Wilson's algorithm** for uniform random maze generation
-- Classic pathfinding references: Russell & Norvig, CLRS, and standard competitive-programming treatments of BFS/DFS/A*/Dijkstra
+**Abdul Wali**
+Computer Science Student | Software Developer
+
+---
+
+⭐ *If you find this project useful, consider giving it a star!*
